@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Aurum Vita Hotel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f7f5;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #343a40;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .checkbox-group label {
+            display: block;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        table th {
+            background-color: #f8f9fa;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>Dashboard Admin - Aurum Vita Hotel</h2>
+    </div>
+    <div class="container">
+        <h3>Pengelolaan Hotel</h3>
+        <form>
+            <div class="form-group">
+                <label for="nomor-kamar">Nomor Kamar:</label>
+                <input type="text" id="nomor-kamar" placeholder="Masukkan Nomor Kamar">
+            </div>
+            <div class="form-group">
+                <label for="jenis-kamar">Jenis Kamar:</label>
+                <select id="jenis-kamar">
+                    <option value="Luxury Super Delux">Luxury Super Delux</option>
+                    <option value="Luxury Family Delux">Luxury Family Delux</option>
+                    <option value="Single Super Delux">Single Super Delux</option>
+                    <option value="Standar Super">Standar Super</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Fasilitas yang Dimiliki Hotel:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" value="Kolam Renang"> Kolam Renang</label>
+                    <label><input type="checkbox" value="Jacuzzi"> Jacuzzi</label>
+                    <label><input type="checkbox" value="Akses Internet"> Akses Internet</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="harga-kamar">Harga Kamar (per malam):</label>
+                <input type="text" id="harga-kamar" placeholder="Masukkan Harga">
+            </div>
+            <button type="button">Simpan Kamar</button>
+        </form>
+        <a href="index.html" class="back-button">Kembali ke Login</a>
+
+        <h3>Data Pemesanan Kamar</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama Konsumen</th>
+                    <th>Nomor Kamar</th>
+                    <th>Jenis Kamar</th>
+                    <th>Fasilitas</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rian</td>
+                    <td>301</td>
+                    <td>Luxury Super Delux</td>
+                   <td>Kolam Renang, Jacuzzi</td>
+                    <td>Rp 499.000</td>
+                </tr>
+                <tr>
+                    <td>Anisa</td>
+                    <td>302</td>
+                    <td>Luxury Family Delux</td>
+                    <td>Akses Internet</td>
+                    <td>Rp 599.000</td>
+                  
+                </tr>
+                <tr>
+                    <td>Bayu</td>
+                    <td>303</td>
+                    <td>Single Super Delux</td>
+                    <td>Kolam Renang, Akses Internet</td>
+                    <td>Rp 299.000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

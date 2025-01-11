@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Data Kamar dan Fasilitas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            display: flex;
+            gap: 40px;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        form {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="text"], input[type="number"], input[type="file"], input[type="time"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="submit_kamar_data" method="post" enctype="multipart/form-data">
+            <h2>Tambah Data Kamar</h2>
+            <label for="id_kamar">ID Kamar:</label>
+            <input type="text" id="id_kamar" name="id_kamar" required>
+
+            <label for="gambar_ruangan">Gambar Ruangan:</label>
+            <input type="file" id="gambar_ruangan" name="gambar_ruangan" accept="image/*">
+
+            <label for="jenis_kamar">Jenis Kamar:</label>
+            <input type="text" id="jenis_kamar" name="jenis_kamar" required>
+
+            <label for="harga">Harga:</label>
+            <input type="number" id="harga" name="harga" required>
+
+            <label for="fasilitas">Fasilitas:</label>
+            <textarea id="fasilitas" name="fasilitas" rows="4" required></textarea>
+
+            <button type="submit">Tambah Data Kamar</button>
+        </form>
+
+        <form action="submit_fasilitas_data" method="post">
+            <h2>Tambah Fasilitas</h2>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>
+
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="fasilitas">Fasilitas:</label>
+            <textarea id="fasilitas" name="fasilitas" rows="4" required></textarea>
+
+            <label for="harga_weekend">Harga Weekend:</label>
+            <input type="number" id="harga_weekend" name="harga_weekend" required>
+
+            <label for="harga_weekday">Harga Weekday:</label>
+            <input type="number" id="harga_weekday" name="harga_weekday" required>
+
+            <label for="kuota">Kuota:</label>
+            <input type="number" id="kuota" name="kuota" required>
+
+            <label for="jam_buka">Jam Buka:</label>
+            <input type="time" id="jam_buka" name="jam_buka" required>
+
+            <label for="jam_tutup">Jam Tutup:</label>
+            <input type="time" id="jam_tutup" name="jam_tutup" required>
+
+            <button type="submit">Tambah Fasilitas</button>
+        </form>
+    </div>
+</body>
+</html>

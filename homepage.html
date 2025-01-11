@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Aurum Vita</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="M6-T1.html">Pemesanan</a></li>
+                    <li><a href="M3-T2.html">Kelola-Kamar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="rooms">
+            <section class="rooms">
+                <div class="room">
+                    <img src="luxury_family.jpg" alt="LuxuryF">
+                    <div class="details">
+                        <h2>Luxury Family Delux</h2>
+                        <p>Harga IDR : 700.000</p>
+                        <button onclick="toggleDetails('luxuryFamilyDelux')">Baca Selengkapnya</button>
+                        <div id="luxuryFamilyDelux" class="room-details" style="display: none;">
+                            <p>Fasilitas: Kamar keluarga besar, Ruang tamu, Kamar mandi luas, Akses ke kolam renang, Akses internet, dan Akses layanan kamar 24 jam</p>
+                            <p>Ukuran Kamar: 70m², 2 Tempat tidur king, Sofa bed, Balkon pribadi.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="room">
+                    <img src="luxury.jpg" alt="Luxury">
+                    <div class="details">
+                        <h2>Luxury Super Delux</h2>
+                        <p>Harga IDR : 500.000</p>
+                        <button onclick="toggleDetails('luxurySuperDelux')">Baca Selengkapnya</button>
+                        <div id="luxurySuperDelux" class="room-details" style="display: none;">
+                            <p>Fasilitas: Kamar singel super premium, Kolam renang pribadi, Jacuzzi, Akses internet dan Layanan kamar 24 jam.</p>
+                            <p>Ukuran Kamar: 50m², Tempat tidur king, Meja kerja, Sofa, Balkon pribadi.</p>
+                        </div>
+                    </div>
+                </div>
+            
+
+            
+                <div class="room">
+                    <img src="deluxe.jpg" alt="Delux">
+                    <div class="details">
+                        <h2>Single Super Delux</h2>
+                        <p>Harga IDR : 300.000</p>
+                        <button onclick="toggleDetails('singleSuperDelux')">Baca Selengkapnya</button>
+                        <div id="singleSuperDelux" class="room-details" style="display: none;">
+                            <p>Fasilitas: Kamar single premium, Akses kolam renang dan Akses internet</p>
+                            <p>Ukuran Kamar: 30m², Tempat tidur king, Meja kerja, Sofa, Kamar mandi pribadi.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="room">
+                    <img src="delux_family.jpg" alt="DeluxF">
+                    <div class="details">
+                        <h2>Standar Super</h2>
+                        <p>Harga IDR : 200.000</p>
+                        <button onclick="toggleDetails('standarSuper')">Baca Selengkapnya</button>
+                        <div id="standarSuper" class="room-details" style="display: none;">
+                            <p>Fasilitas: Kamar standar dengan tempat tidur king dan Akses Wi-Fi gratis.</p>
+                            <p>Ukuran Kamar: 25m², Tempat tidur king, Kamar mandi pribadi.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <script>
+                function toggleDetails(roomId) {
+                    var roomDetails = document.getElementById(roomId);
+                    if (roomDetails.style.display === "none" || roomDetails.style.display === "") {
+                        roomDetails.style.display = "block";
+                    } else {
+                        roomDetails.style.display = "none";
+                    }
+                }
+            </script>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Aurum Vita. All rights reserved.</p>
+    </footer>
+</body>
+</html>
